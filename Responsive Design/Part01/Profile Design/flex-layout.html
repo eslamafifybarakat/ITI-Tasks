@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>RWD</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        #main {
+            display: flex;
+            flex: 1;
+        }
+
+        #main>article {
+            flex: 1;
+            border: 5px outset grey
+        }
+
+
+        #main>.nav,
+        #main>aside {
+            flex: 0 0 20vw;
+            background: rgb(0, 0, 0);
+        }
+
+        #main>.nav {
+            order: -1;
+        }
+
+        header,
+        footer {
+            background: black;
+            height: 10vh;
+            text-align: center;
+            color: white;
+        }
+
+        video {
+
+            width: 100%;
+
+            height: auto;
+
+        }
+
+        header,
+        footer,
+        article,
+        .nav,
+        aside {
+            padding: 1em;
+        }
+
+        aside>img {
+            margin-top: 15%;
+            height:100%;
+            border-radius: 7px;
+        }
+
+        .rr {
+            height: auto;
+            max-width: 100%;
+        }
+
+        footer {
+            border-top: 5px outset grey
+        }
+
+        
+
+        #navicon {
+            background-color: gray;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        /* Style the navigation bar */
+        .navbar {
+            width: 100%;
+            background-color: #555;
+            overflow: auto;
+        }
+
+        /* Navbar links */
+        .navbar a {
+            float: left;
+            text-align: center;
+            padding: 12px;
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        /* Navbar links on mouse-over */
+        .navbar a:hover {
+            background-color: #000;
+        }
+
+        article>h1 {
+            text-align: center;
+        }
+
+        h4 {
+            display: inline;
+        }
+
+        ul li {
+            padding: 5px;
+        }
+
+        article>ul {
+            margin-top: 15px;
+        }
+
+        video {
+
+            margin-top: 20%;
+            border: 5px outset red;
+        }
+
+        .myDiv {
+            border: 5px outset red;
+            background-color: white;
+            text-align: center;
+            margin-top: 20%
+        }
+
+        /* form */
+        input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #000000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #000000;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #838181;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media only screen and (max-width: 900px) {
+            aside {
+                display: none;
+
+            }
+
+            article {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            aside {
+                display: none;
+
+            }
+
+            article {
+                width: 100%;
+            }
+
+            .nav {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 450px) {
+
+            .navbar {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>Website Logo(Image)</header>
+    <nav id="navicon" class="navbar">
+        <a href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+        <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+        <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+    </nav>
+    <div id="main">
+        <article>
+            <h1>My Profile</h1>
+            <ul style="list-style-type:circle">
+                <li>
+                    <h4>Name:</h4>Eslam Afify Barakat
+                </li>
+                <li>
+                    <h4>Age:</h4> 24
+                </li>
+                <li>
+                    <h4>Address:</h4> Sers El-layaan, Menofia, Egypt
+                </li>
+                <li>
+                    <h4>Phone:</h4> 01021615605
+                </li>
+                <li>
+                    <h4>Faculty:</h4> FCI
+                </li>
+                <li>
+                    <h4>Hobbies</h4>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>Email:</h4> <a>eslamafifybarakat@gmail.com</a>
+                </li>
+            </ul>
+        </article>
+        <div class="nav">
+            <!-- <div class="myDiv">
+                <h2>This is a heading in a div element</h2>
+                <p>This is some text in a div element.</p>
+            </div> -->
+            <div class="container">
+                <form action="/action_page.php">
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="fname">First Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="lname">Last Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="country">Country</label>
+                        </div>
+                        <div class="col-75">
+                            <select id="country" name="country">
+                                <option value="australia">Australia</option>
+                                <option value="canada">Canada</option>
+                                <option value="usa">USA</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+            <video width="400" controls>
+
+                <source src="money.mp4" type="video/mp4">
+
+                <source src="money.mp4" type="video/ogg">
+
+                Your browser does not support HTML5 video.
+
+            </video>
+        </div>
+        <aside>
+            <img src="eslam.jpg" class="rr" alt="">
+        </aside>
+    </div>
+    <footer>Copyrights © are reserved to Eslam Afify</footer>
+</body>
+
+</html>
