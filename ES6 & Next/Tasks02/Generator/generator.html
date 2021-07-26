@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator</title>
+</head>
+
+<body>
+    <script>
+        // Generate Max Number
+        function* gen1(max) {
+            var flag = 0;
+            // const infinite = !max && max !== 0;
+            let current = 0;
+            let next = 1;
+            do {
+                yield current;
+                if (current <= max) {
+                    [current, next] = [next, current + next];
+                } else {
+                    flag = 1;
+                    console.log(`You Can not Generate Summition Value than ${current}`);
+                }
+
+            }
+            while (flag == 0);
+            // while ((infinite || max--) && flag == 0);
+        }
+        // Generate limited times
+        function* gen2(count) {
+            var flag = 0;
+            let current = 0;
+            let next = 1;
+            var x = 0;
+            while (x <= count - 1) {
+                x++;
+                yield current;
+                [current, next] = [next, current + next];
+
+            }
+            console.log(`You Can not print more than ${count} times`);
+        }
+    </script>
+</body>
+
+</html>

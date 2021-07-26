@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol Replace</title>
+</head>
+
+<body>
+    <script>
+        // var str = "This is a Javascript Language";
+        var str;
+        var newStr;
+        var obj = {
+            [Symbol.replace](str, idx) {
+                if (str.length > 15) {
+                    newStr = str.substring(0, 14) + "...";
+                }
+                else {
+                    newStr = str;
+                }
+                console.log("Length of String: " + str.length)
+                return newStr;
+            }
+        }
+        // console.log(str.replace(obj, 14));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks01</title>
+</head>
+
+<body>
+    <Script>
+        // Task1
+        var x, y;
+        [x, y] = [1, 2];
+        console.log(`Before Swapping:\nx=${x}\ny=${y}`);
+        [x, y] = [y, x];//swap
+        console.log(`After Swapping:\nx=${x}\ny=${y}`);
+
+        //Task2
+        function MaxMin(arr) {
+            let max = Math.max(...arr);
+            let min = Math.min(...arr);
+            console.log(`Max=${max}\nMin=${min}`);
+        }
+        //Task3
+        var fruits = ["apple", "strawberry", "banana", "orange", "mango"];
+        console.log(`Check Type isString:\n` + fruits.every(function (val, indx, arr) {
+            return typeof (val) === "string";
+        }));
+
+        console.log(`Check Some Words Start with "a":\n` + fruits.some(function (val, indx, arr) {
+            return val[0] === "a";
+        }));
+
+        console.log(`Only elements that starts with "b" or "s":\n` + fruits.filter(function (val, indx, arr) {
+            return val[0] === "a" || val[0] === "s";
+        }));
+
+        var array = fruits.map(val => `I like ${val}`);
+        array.forEach(function (item) {
+            console.log(item);
+        });
+    </Script>
+</body>
+
+</html>

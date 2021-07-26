@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Paramters</title>
+</head>
+
+<body>
+    <script>
+        function courseInfo(obj) {
+            var defaultObj = {
+                courseName: "ES6",
+                courseDuration: "3days",
+                courseOwner: "JavaScript",
+            }
+            var settings = Object.assign({}, defaultObj, obj)
+            if (Object.keys(defaultObj).length >= Object.keys(obj).length) {
+                console.log(settings);
+            } else {
+                throw new Error("Error!!\nuser is allowed not to pass all of these properties, he can pass needed properties only")
+                // console.log("")
+            }
+
+        };
+        var c1info = courseInfo({
+            courseName: "ES8",
+            courseDuration: "5days",
+            courseOwner: "bootstrap",
+            // details: "Aya 7aga"
+        });
+    </script>
+</body>
+
+</html>
