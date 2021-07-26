@@ -1,0 +1,24 @@
+<!-- <div>Users Data</div> -->
+<table>
+  <caption>Users Data</caption>
+  <thead>
+      <th>ID</th>
+      <th>Name</th>
+      <th>E-mail</th>
+      <th>Phone</th>
+      <th>Details</th>
+      <th>Delete</th>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of users">
+      <td>{{u.id}}</td>
+      <td>{{u.name}}</td>
+      <td>{{u.email}}</td>
+      <td>{{u.phone}}</td>
+      <td><a routerLink="{{u.id}}">Details</a></td>
+      <td><button (click)="deleteUser(u.id)">Delete</button></td>
+    </tr>
+
+  </tbody>
+</table>

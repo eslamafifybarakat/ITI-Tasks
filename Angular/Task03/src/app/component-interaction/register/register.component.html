@@ -1,0 +1,28 @@
+<h1 style="width: 25%; background-color: rgb(80, 68, 250);">Registration</h1>
+
+<div>
+    <form [formGroup]="ourValidationForm">
+        <p>Please fill in this form to Register a new record data...</p>
+        <hr>
+
+        <label for="name"><b style="margin-left: 7px;">Name </b></label>
+        <input formControlName="name" *ngIf="nameValid" type="text" placeholder="Enter Name" id="name">
+        <input formControlName="name" *ngIf="!nameValid" type="text" placeholder="Enter Name" id="name" style="border: 1px solid red;">
+        <div *ngIf="!nameValid" style="color: red; width: 50%; border: 0px none white; margin-left: 60px;">
+            <!-- <input formControlName="name" type="text" placeholder="Enter Name" id="name"> -->
+            Not Valid Name
+        </div>
+        <br>
+
+        <label for="age"><b style="margin-left: 7px;">Age </b></label>
+        <input formControlName="age" *ngIf="ageValid" type="number" placeholder="Enter Age" id="age" style="margin-left: 12px;">
+        <input formControlName="age" *ngIf="!ageValid" type="number" placeholder="Enter Age" id="age" style="border: 1px solid red;">
+        <div *ngIf="!ageValid" style="color: red; width: 50%; border: 0px none white; margin-left: 60px;">
+            <!-- <input formControlName="age" type="number" placeholder="Enter Age" id="age"> -->
+            Not Valid Age
+        </div>
+
+        <input type="button" value="Add Student" (click)="AddNewStudent($event)">
+
+    </form>
+</div>

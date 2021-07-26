@@ -1,0 +1,30 @@
+div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  align-items: center;
+  /* background-color: rgb(236, 164, 9); */
+}
+
+h1 {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 52px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  height: 300px;
+  margin: auto;
+}
+
+p {
+  color: whitesmoke;
+  font-size: 52px;
+  font-weight: 600;
+  text-transform: lowercase;
+  text-align: center;
+  width: 100%;
+  height: 300px;
+  margin: auto;
+}

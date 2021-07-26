@@ -1,0 +1,17 @@
+<div class="main">
+  <form class="form">
+    <h2>Insert Data</h2>
+    <div>
+      <input #name class="w-50 form-control" id="n" type="text" placeholder="Enter Name">
+    </div>
+    <div>
+      <input #email class="w-50 form-control" id="e" type="text" placeholder="Enter Email">
+    </div>
+    <div>
+      <input #phone type="text" placeholder="Enter Phone">
+    </div>
+    <div class="m-2 form-group text-center">
+      <input class="btn" value="ADD" type="button" (click)="AddUser(name.value, email.value, phone.value)">
+    </div>
+  </form>
+</div>

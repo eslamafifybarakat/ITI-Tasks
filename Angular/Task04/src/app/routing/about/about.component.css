@@ -1,0 +1,11 @@
+/* div About css */
+div{
+    color:black;
+    font-size: 40px;
+    background-color: blanchedalmond;
+    width: auto;
+    height: 200px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 15px;
+}

@@ -1,0 +1,15 @@
+<h1 style="width: 25%; background-color: rgb(80, 68, 250);">Students</h1>
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of studensData; index as i">
+            <td>{{i}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.age}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+h1 {
+    text-align: center;
+    background-color: rgb(126, 172, 212);
+    color: white;
+    width: 40%;
+    padding: 5p;
+    margin: 10px auto;
+    border-radius: 7px;
+}
+
+div {
+    border: solid black 2px;
+    border-radius: 7px;
+    margin: 10px;
+}
+body {
+    background-image:url(assets/Images/7.jpg);
+}

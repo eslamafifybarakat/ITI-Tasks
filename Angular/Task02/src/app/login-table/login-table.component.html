@@ -1,0 +1,29 @@
+<h1>Registration</h1>
+
+<div>
+    <input type="text" placeholder="Enter Name" [(ngModel)]="name"><br>
+    <div *ngIf="!NameValid" style="background-color: red;">
+        Not Valid Name & Length &lt;= 3
+    </div>
+    <input type="text" placeholder="Enter Age" [(ngModel)]="age"><br>
+    <div *ngIf="!AgeValid && age!=0" style="background-color: red;">
+        Not Valid Age
+    </div>
+    <input type="button" value="Add" (click)="AddNewStudent()">
+</div>
+<br>
+<h1>Students</h1>
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of students; index as i">
+            <td>{{i}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.age}}</td>
+        </tr>
+    </tbody>
+</table>

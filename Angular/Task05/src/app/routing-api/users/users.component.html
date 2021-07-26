@@ -1,0 +1,37 @@
+<!-- <div>Users Data</div> -->
+<table>
+  <caption>Users Data</caption>
+  <thead>
+    <tr>
+      <th rowspan="2" appCustom>ID</th>
+      <th rowspan="2" appCustom>Name</th>
+      <th rowspan="2" appCustom>Username</th>
+      <th rowspan="2" appCustom>E-mail</th>
+      <th colspan="2" appCustom>Address</th>
+      <th rowspan="2" appCustom>Phone</th>
+      <th rowspan="2" appCustom>Website</th>
+      <th rowspan="2" appCustom>Details</th>
+    </tr>
+    <tr>
+      <th>Street</th>
+      <th>City</th>
+    </tr>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of users">
+      <td appCustom>{{u.id}}</td>
+      <td>{{u.name|custom}}</td>
+      <td>{{u.username}}</td>
+      <td>{{u.email}}</td>
+      <td>{{u.address.street}}</td>
+      <td>{{u.address.city}}</td>
+      <td>{{u.phone}}</td>
+      <td>{{u.website}}</td>
+      <td><a routerLink="{{u.id}}">Details</a></td>
+    </tr>
+
+
+
+  </tbody>
+</table>
