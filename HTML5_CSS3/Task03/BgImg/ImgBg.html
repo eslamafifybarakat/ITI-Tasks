@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImgBg</title>
+    <style>
+        h1 {
+            position: absolute;
+            top: 234px;
+            text-shadow: 5px 11px 5px rgb(248, 247, 247);
+            color: white;
+            padding:5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img style="display: none;" id="img1" src="img.jpg" width="300" height="auto">
+        <canvas id="myCanvas" width="500" height="300" style="border: 1px solid rgb(0, 0, 0);"></canvas>
+        <h1>Its gonna be OK Sweetheart</h1>
+    </div>
+    <script>
+        window.onload = function () {
+            var context = document.getElementById("myCanvas").getContext("2d");
+            var img = document.getElementById("img1")
+            context.drawImage(img, 0, 0, 550, 300)
+
+        }
+    </script>
+</body>
+
+</html>

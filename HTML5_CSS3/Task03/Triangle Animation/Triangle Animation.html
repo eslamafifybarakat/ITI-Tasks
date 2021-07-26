@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=New Rocker" rel="stylesheet">
+    <title>Triangle Animation</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="700px" height="300px"></canvas>
+    <script>
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        var startX = 300;
+        var startY = 100;
+        var timer;
+        var index = 0;
+
+
+        // draw a rotated rect
+        timer = setInterval(() => {
+            drawRotatedRect(startX, startY, 200, 30, index);
+            index = index + 40;
+            if (index >= 180) {
+                index = 0;
+                clearInterval(timer);
+            }
+        }, 1000);
+
+
+
+        function drawRotatedRect(x, y, width, height, degrees) {
+            // first save the untranslated/unrotated context
+            ctx.save();
+            // move the rotation point to the center of the rect
+            ctx.translate(x + width / 2, y + height / 2);
+            // rotate the rect
+            ctx.rotate(degrees * Math.PI / 180);
+            ctx.rect(-width / 2, -height / 2, width, height);
+            ctx.fillStyle = "rgba(0,10,250,0.3)";
+            ctx.fill();
+            // restore the context to its untranslated/unrotated state
+            ctx.restore();
+        }
+    </script>
+</body>
+
+</html>

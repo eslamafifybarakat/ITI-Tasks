@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Color Range</title>
+    <script src="jquery-3.6.0.js"></script>
+    <script src="jquery-ui.js"></script>
+</head>
+
+<body style="align-items:center;">
+    <label for="red">Red</label>
+    <input id="red" class="range red" name="red" type="range" min="0" max="255"><br>
+    <label for="green">Green</label>
+    <input id="green" class="range green" name="green" type="range" min="0" max="255"><br>
+    <label for="blue">Blue</label>
+    <input id="blue" class="range blue" name="blue" type="range" min="0" max="255"><br>
+    <button id="btn">change</button>
+    <p class="text" id="text">Change The 3 color Ranges above and observe my color change</p>
+    <script>
+        $(function () {
+            var red, green, blue;
+            $('#btn').on('click', function () {
+                red = $('#red').val();
+                green = $('#green').val();
+                blue = $('#blue').val();
+                console.log(red, green, blue);
+                $('#text').css('color', 'rgb(' + red + ',' + green + ',' + blue + ')');
+            });
+        });
+    </script>
+</body>
+
+</html>

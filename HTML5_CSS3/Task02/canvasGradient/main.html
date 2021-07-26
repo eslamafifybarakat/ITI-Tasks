@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+
+<body>
+    <canvas id="mycanvas" width="400" height="400" style="border:2px solid black"></canvas>
+    <script>
+        var canvas = document.getElementById("mycanvas");
+        var context = canvas.getContext("2d");
+
+        // Create gradients
+        var lingrad = context.createLinearGradient(0, 0, 0, 380);
+        lingrad.addColorStop(0, '#f0f');
+        lingrad.addColorStop(0.5, '#fff');
+        lingrad.addColorStop(0.5, 'rgba(255, 0,0, 0)');
+        lingrad.addColorStop(1, '#fff');
+
+        var lingrad2 = context.createLinearGradient(0, 150, 0, 195);
+        lingrad2.addColorStop(0.5, '#000');
+        lingrad2.addColorStop(1, 'rgba(0, 0, 0, 0)');
+
+        // assign gradients to fill and stroke styles
+        context.fillStyle = lingrad;
+        context.strokeStyle = lingrad2;
+
+        // draw shapes
+        context.fillRect(10, 10, 365, 400);
+        context.strokeRect(130, 150, 100, 200);
+    </script>
+</body>
+
+</html>

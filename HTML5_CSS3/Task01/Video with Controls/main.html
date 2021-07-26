@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Video Controls</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <video src="https://s3.eu-central-1.amazonaws.com/pipe.public.content/short.mp4" id="videoPlayer"></video>
+    <p>Playback position: <span id="demo"></span></p>
+    <br><br>
+    <button onclick="playPause()">Play/Pause</button>
+    <button onclick="reload()">Reload</button>
+    <button onclick="makeLarge()">Large</button>
+    <button onclick="makeSmall()">Small</button>
+    <button onclick="makeNormal()">Normal</button>
+    <button onclick="muted()">Muted</button>
+    <button onclick="unmuted()">unMuted</button>
+    <button onclick="speed()">Speed</button>
+    <button onclick="backword2()">&#60;&#60;</button>
+    <button onclick="backword()">&#60;</button>
+    <button onclick="forward()">&#62;</button>
+    <button onclick="forward2()">&#62;&#62;</button>
+    <button onclick="stop()">Stop</button>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

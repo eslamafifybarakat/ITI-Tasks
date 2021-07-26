@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Line</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="500" height="500" style="border: 3px solid black;"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        var stopAnimationPoint = 0;
+        var timerID = setInterval(createLine, 7)
+        function createLine() {
+            ctx.lineTo(stopAnimationPoint, stopAnimationPoint);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 3;
+            ctx.stroke();
+            stopAnimationPoint++;
+            if (stopAnimationPoint > 510) {
+                clearInterval(timerID)
+                alert('Animation is Stopped');
+            }
+        }
+
+    </script>
+</body>
+
+</html>

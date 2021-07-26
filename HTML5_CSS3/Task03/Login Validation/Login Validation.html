@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Email Address</title>
+    <style>
+        input[type=text]{
+            width: 75%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 2px solid red;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+         input[type=email]{
+            width: 75%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 2px solid red;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    
+        input[type=submit] {
+            width: 50%;
+            background-color: #284ffd;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    
+        input[type=submit]:hover {
+            background-color: #d11c1c;
+        }
+    
+        div {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <form align="center">
+        <h2>Change Email Address</h2><br>
+        <input id="username" type="text" onkeyup="validate1()" required
+            pattern="^[a-zA-Z0-9](_(?!(\.|_))|\.(?!(_|\.))|[a-zA-Z0-9]){6,18}[a-zA-Z0-9]$" value=""
+            placeholder="Username" title="The required username may only be a series of alphanumeric characters">
+            <br>
+        <p id="valid1">The required username may only be a series of alphanumeric characters</p>
+
+
+        <input id="email" type="email" onkeyup="validate2()" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            value="" placeholder="E-mail Address"
+            title="the required email address may not include any special characters other thanThe '@' sign.">
+            <br>
+        <p id="valid2">the required email address may not include any special characters other thanThe '@' sign.</p>
+        <input type="submit" value="Change">
+    </form>
+    <script>
+        function validate1() {
+            var username = document.getElementById('username');
+            var userval = username.value;
+            var uspattern = username.pattern;
+            if (userval.match(uspattern)) {
+                document.getElementById('valid1').style.display = 'none'
+            } else {
+                document.getElementById('valid1').style.display = 'block'
+            }
+        }
+        function validate2() {
+            var email = document.getElementById('email');
+            var emailval = email.value;
+            var empattern = email.pattern;
+            if (emailval.match(empattern)) {
+                document.getElementById('valid2').style.display = 'none'
+            } else {
+                document.getElementById('valid2').style.display = 'block'
+            }
+        }
+
+    </script>
+</body>
+
+</html>
