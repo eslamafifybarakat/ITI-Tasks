@@ -1,0 +1,315 @@
+html {
+    font-family: "Oswald";
+    margin: 1em 20%;
+    background-color:rgb(126, 14, 14);
+}
+
+
+/* navigation bar css */
+#logo {
+    /* background-color:red; */
+    position: relative;
+    float: left;
+    font-size: 3em;
+    margin: 0;
+    padding: .4em;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-right: 1px solid #e3e3e8;
+    transition: .5s all;
+}
+
+#logo:hover {
+    color: #7e0000;
+    background-color: #333;
+}
+
+nav ul {
+    background-color: rgb(0, 0, 0);
+    border-bottom: 5px solid brown;
+    list-style-type: none;
+    margin: 0;
+    padding: 2.2em 2em;
+}
+
+nav ul li {
+    display: inline;
+    padding: 0 .4em;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.6em;
+    padding-bottom: 1.3em;
+    transition: .5s color;
+    color: rgb(255, 255, 255);
+}
+
+nav ul li a:hover {
+    border-bottom: 3px solid #333;
+}
+
+/* #current {
+    color: #ff4629;
+} */
+
+a:hover {
+    color: #fc0000;
+}
+
+/* div About css */
+.divAbout {
+    margin: auto;
+    padding: auto;
+    margin-top: 40px;
+    width: auto;
+    display: none;
+}
+
+.divAbout {
+    padding: 10px;
+    height: 150px;
+    width: 400px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgba(black, 0.66) 0 30px 60px 0,
+        inset #333 0 0 0 5px,
+        inset rgba(white, 0.5) 0 0 0 6px;
+}
+
+/* div gallery */
+.divGallery {
+    margin: auto;
+    padding: auto;
+    margin-top: 40px;
+    width: auto;
+    display: none;
+}
+
+/*---------------slide show container--------------*/
+
+.slideShow-container {
+
+    position: relative;
+    margin-top: 10px;
+
+}
+
+
+/*-------------------------images------------*/
+.slides {
+    display: none;
+
+
+}
+
+#spec {
+    display: block;
+}
+
+.slides img {
+    display: block;
+    height: 500px;
+    width: 1030px;
+    /* vertical-align: bottom; */
+    margin: auto;
+}
+
+
+/*------------dots-----------*/
+
+.dot {
+
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(247, 8, 8);
+    text-align: center;
+    transition: .6s ease;
+    left: 46%;
+    display:none;
+
+}
+
+.slideshow-dots {
+
+    position: relative;
+    margin-top: 10px;
+}
+
+.active,
+.dot:hover {
+    background-color: #000000;
+}
+
+/*----------next and previous buttons---------*/
+.next,
+.prev {
+
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    transition: .6s ease;
+    padding-bottom: 10px;
+
+}
+
+.prev {
+    left: 22.9%;
+    padding-right: 10px;
+
+}
+
+.next {
+
+    right: 22.9%;
+    padding-left: 10px;
+    padding-right: 0px;
+}
+
+/*add a backgorund hover color to next and prev arrows*/
+/*create animation for each image with opacity less than 1 to see image through*/
+
+
+.next:hover,
+.prev:hover {
+    /* background-color: red;
+    border-color: rgb(23, 8, 228); */
+    border-radius: 50px;
+    border-style: solid;
+    width: 25px;
+}
+
+/*----create animation for photos and dots at the bottom of carousel-----*/
+.fade {
+
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+
+/* Div Services */
+.divServices {
+    margin: auto;
+    padding: auto;
+    margin-top:0px ;
+    width: auto;
+    display: none;
+}
+
+#btnser {
+    width: 100px;
+    height: 40px;
+    margin: auto;
+    margin-top: 2px;
+    display: block;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+    text-align: center;
+}
+
+/* form css *//* div css */
+.divForm {
+margin: auto;
+padding: auto;
+margin-top: 40px;
+width: auto;
+display: none;
+}
+form {
+    /* Center the form on the page */
+    margin: 0 auto;
+    width: 400px;
+    /* Form outline */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    background-color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+form li+li {
+    margin-top: 1em;
+}
+
+label {
+    /* Uniform size & alignment */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+input,
+textarea {
+    /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+    font: 1em sans-serif;
+
+    /* Uniform text field size */
+    width: 300px;
+    box-sizing: border-box;
+
+    /* Match form field borders */
+    border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+    /* Additional highlight for focused elements */
+    border-color: #000;
+}
+
+textarea {
+    /* Align multiline text fields with their labels */
+    vertical-align: top;
+
+    /* Provide space to type some text */
+    height: 5em;
+}
+
+.button {
+    /* Align buttons with the text fields */
+    padding-left: 90px;
+    /* same size as the label elements */
+}
+
+button {
+    /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+    margin-left: .5em;
+}
+.view {
+    margin: auto;
+    padding: auto;
+    margin-top: 40px;
+    width: auto;
+    display: none;
+}
+
+.view {
+    padding: 10px;
+    height: auto;
+    width: 400px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgba(black, 0.66) 0 30px 60px 0,
+        inset #333 0 0 0 5px,
+        inset rgba(white, 0.5) 0 0 0 6px;
+}

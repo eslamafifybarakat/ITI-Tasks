@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <script src="jquery-3.6.0.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="plugin.js"></script>
+    <link rel="stylesheet" href="plugin.css">
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <div>
+        <a id="logo" href="#">OP</a>
+        <nav>
+            <ul>
+                <li><a href="#" id="current">About</a></li>
+                <li><a href="#" id="gallery">Gallery</a></li>
+                <li><a href="#" id="services">Services</a></li>
+                <li><a href="#" id="complain">Complain</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <!-- About -->
+    <div class="divAbout">
+        Story about now man....!
+    </div>
+
+
+    <!-- Gallery -->
+    <div class="divGallery">
+        <div class="slides fade" id="spec">
+            <img src="http://res.cloudinary.com/dlbvsp0o4/image/upload/v1519571665/altaka_ch0alz.jpg" class="img"
+                alt="Beautiful view of the most famous mountain in Kasala">
+        </div>
+
+        <div class="slides fade">
+            <img src="http://res.cloudinary.com/dlbvsp0o4/image/upload/v1519571656/7asan-mosque_joziho.jpg" class="img"
+                alt="Sidi Al Hassan Mosque near Al taka mountain">
+        </div>
+
+        <div class="slides fade">
+            <img src="http://res.cloudinary.com/dlbvsp0o4/image/upload/v1519571648/beautiful_rx4j9w.jpg" class="img"
+                alt="Young sheep farmer">
+        </div>
+
+        <div class="slides fade">
+            <img src="http://res.cloudinary.com/dlbvsp0o4/image/upload/v1519571648/kasala_zigzmt.jpg" class="img"
+                alt="A nother view of Sidi Al Hassan Mosque, beautiful architecture">
+        </div>
+
+        <!-- next and previous arrow -->
+        <div class="divArrow">
+            <a class="prev" onclick="nextSlide(-1)">&#60;</a>
+            <a class="next" onclick="nextSlide(1)">&#62;</a>
+        </div>
+
+        <!-- create dots at the bottom of the slideshow Carousel-->
+    </div>
+
+
+    <div class="slideshow-dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+    </div>
+
+
+    <!-- Services -->
+    <div class="divServices">
+        <input type="button" value="Item1" id="btnser">
+        <input type="button" value="Item2" id="btnser">
+        <input type="button" value="Item3" id="btnser">
+    </div>
+
+
+    <!-- Complain -->
+    <div class="divForm">
+        <form>
+            <ul>
+                <li>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="user_name" />
+                </li>
+                <li>
+                    <label for="mail">E-mail:</label>
+                    <input type="email" id="mail" name="user_email" />
+                </li>
+                <li>
+                    <label for="phone">Phone:</label>
+                    <input type="phone" id="phone" name="user_phone" />
+                </li>
+                <li>
+                    <label for="msg">Complain:</label>
+                    <textarea id="complain" name="user_complain"></textarea>
+                </li>
+                <li class="button">
+                    <button type="button" id="myBtn">Send your complain</button>
+                </li>
+        </form>
+    </div>
+    <div class="view">Welcome!</div>
+</body>
+
+</html>
