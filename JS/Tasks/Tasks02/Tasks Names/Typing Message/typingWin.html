@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Typing</title>
+
+</head>
+<body>
+</body>
+    <p id="demo"></p>
+
+    <script>
+    var i = 0;
+    var txt = 'Featured articles are considered to be some of the best articles Wikipedia has to offer, as determined by Wikipedia/s editors. They are used by editors as examples for writing other articles.';
+    var speed = 50;
+
+    function typeWriter() {
+    if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+    }
+    typeWriter();
+    setTimeout(function(){window.close();},15000);
+</script>
+</html>

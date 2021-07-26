@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Rectangle</title>
+</head>
+
+<body>
+    <label>Enter Rectangle Width </label>
+    <input type="text" placeholder="Typing... " id="rW" class="widthClass"><br>
+    <label>Enter Rectangle Height </label>
+    <input type="text" placeholder="Typing... " id="rh" class="heightClass"><br>
+    <button type="button" onclick="getInputValue();">Create Rectangle</button>
+    <button type="button" onclick="display();">Display Info</button>
+    <div id="main"></div>
+    <div id="width"></div>
+    <div id="height"></div>
+    <div id="perimeter"></div>
+    <div id="area"></div>
+
+
+    <script>
+        var wVal;
+        var hVal;
+        var perimeter;
+        var area;
+        function getInputValue() {
+            // Selecting the input element and get its value 
+            wVal = document.getElementsByClassName("widthClass")[0].value;
+            hVal = document.getElementsByClassName("heightClass")[0].value;
+            perimeter = (wVal + hVal) * 2;
+            area = wVal * hVal;
+            // Displaying the value
+
+            var div = document.createElement("div");
+            div.style.width = wVal + "px";
+            div.style.height = hVal + "px";
+            div.style.background = "white";
+            div.style.color = "black";
+            div.style.textAlign = "center";
+            div.style.border = "thick solid #0000FF"
+            div.innerHTML = "Done...!";
+            document.getElementById("main").appendChild(div);
+        }
+        function display() {
+
+            //Displaying the width
+            var para = document.createElement("p");
+            var node = document.createTextNode("This is Width: " + wVal);
+            para.appendChild(node);
+            var element = document.getElementById("width");
+            element.appendChild(para);
+
+            //Displaying the height
+            var para = document.createElement("p");
+            var node = document.createTextNode("This is Height: " + hVal);
+            para.appendChild(node);
+            var element = document.getElementById("height");
+            element.appendChild(para);
+
+            //Displaying the perimeter
+            var para = document.createElement("p");
+            var node = document.createTextNode("This is Perimeter: " + perimeter);
+            para.appendChild(node);
+            var element = document.getElementById("perimeter");
+            element.appendChild(para);
+
+            //Displaying the area
+            var para = document.createElement("p");
+            var node = document.createTextNode("This is area: " + area);
+            para.appendChild(node);
+            var element = document.getElementById("area");
+            element.appendChild(para);
+        }
+
+    </script>
+</body>
+
+</html>

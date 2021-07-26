@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Pictyre</title>
+</head>
+<body>
+    <div id="div" style="padding-top: 180px; width: 400px;height: 300px;border-color: steelblue;border-style: double;">
+        <img id="img1" src="icon1.gif" style="float:left">
+        <img id="img2" src="icon2.gif" style="float: right;">
+        <img id="img3"  src="TOP.JPG" style="padding: 263px 136px 115px;">
+    </div>
+    <input type="button" value="start" onclick="start()">
+    <input type="button" value="stop" onclick="stop()">
+</body>
+<script>
+    var img1 = document.getElementById('img1');
+    var img2 = document.getElementById('img2');
+    var img3 = document.getElementById('img3');
+    var frameWid = 102; 
+    var frames = 22; 
+    var frame = 0; 
+    var timer;
+    function start(){
+        timer = setInterval(function start(){
+            var frameOffset = (++frame % frames) * frameWid;
+            if(frameOffset==306){
+                frameOffset = 0;   
+                clearInterval(timer);     
+            }else{
+                img1.style.marginLeft =""+frameOffset+"px";
+                img2.style.marginRight =""+frameOffset+"px";
+                img3.style.paddingTop =""+frameOffset+"px";
+
+            }
+            console.log(frameOffset); 
+        
+    }, 1000);
+    }
+    function stop (){
+        clearTimeout(timer);
+    }
+    
+    
+    
+   
+</script>
+</html>

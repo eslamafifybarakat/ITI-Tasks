@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajax Table</title>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: unset;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #0e42d1;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #e4e8eb;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <thead>
+      <td style="background-color: rgb(126, 21, 3); color: white;">E-mail</td>
+      <td style="background-color: rgb(126, 21, 3); color: white;">First Name</td>
+      <td style="background-color: rgb(126, 21, 3); color: white;">Last Name</td>
+    </thead>
+    <tbody id="bodytable">
+    </tbody>
+  </table>
+  <script src="data.js"></script>
+</body>
+
+</html>

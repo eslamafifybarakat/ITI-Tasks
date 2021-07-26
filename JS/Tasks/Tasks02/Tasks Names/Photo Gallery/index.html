@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        #imgs {
+            margin-left: 25%;
+            margin-right: 20%;
+            box-shadow: 10px 10px 5px grey;
+            padding-top: 10px;
+            margin-top: 5px;
+            width: 650px;
+            height: 350px;
+            border-radius:20px ;
+        }
+        input {
+            padding:10px;
+            margin: 5px;
+            background-color:rgb(218, 236, 247);
+            color: black;
+            border-style: hidden;
+            border-radius: 10px;
+            text-decoration: gray;
+            font-style: italic;
+            font-size:medium;
+        }
+        img{
+            width: 650px;
+            height: 350px;
+        }
+        body {
+            background-image: url("gallery.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <h1 style="margin-left: 40%; color: brown;">Photo Gallery</h1>
+    <hr style="margin-left: 10%; background-color: brown;" width="75%">
+    <br>
+    <div id="imgs">
+        <img name="slide" src="1.jpg" width="100px" height="120px">
+    </div>
+    <div style="display: inline-block; margin-left: 25%;">
+        <input type="button" value="Next" onclick="next()">
+        <input type="button" value="SlideShow" onclick="slideshow()">
+        <input type="button" value="Stop" onclick="stop()">
+        <input type="button" value="Previous" onclick="previous()">
+    </div>
+    <script src="./data.js"></script>
+</body>
+</html>

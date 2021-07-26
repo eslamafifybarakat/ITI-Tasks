@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+</head>
+<body>
+    <div>
+        <label for="name">Name</label>
+        <input id="usname" onmouseout="getvalue1(this.value)" type="text" placeholder="Enter your Name">
+        <br>
+        <label for="age">Age</label>
+        <input id='age' type="text" onmouseout="getvalue2(this.value)" placeholder="Enter your Age">
+        <br>
+        <div style="display: inline;">
+            <input type="radio" id="gender" name="gender" value="male" checked>
+            <label for="male">Male</label><br>
+            <input type="radio" id="gender" name="gender" value="female">
+            <label for="female">Female</label><br>
+        </div>
+        <div style="display: inline;">
+            <img src="1.jpg" width="100px" height="100px">
+            <img src="2.jpg" width="100px" height="100px">
+        </div>
+        <br>
+        <label for="male">Favorite Color</label><br>
+        <select id="favcolor">
+            <option value="red">red</option>
+            <option selected value="green">green</option>
+            <option value="blue">blue</option>
+        </select>
+        <input id='btn' type="button" value="Confirm">
+    </div>
+    
+<script src="./data.js"></script>
+</body>
+</html>

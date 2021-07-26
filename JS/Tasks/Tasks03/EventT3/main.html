@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submition Form</title>
+</head>
+
+<body>
+    <form action="next.html" onsubmit="return submitForm(this);">
+        <input id="demo" type="text" name="submit" />
+        <button value="submit">Submit</button>
+    </form>
+    <script>
+        function submitForm() {
+            return confirm('Do you really want to submit the form?');
+        }
+        // new event
+        window.document.addEventListener("attention", function (event) {
+            alert('Plz Enter Data with This Page');
+            window.location.href = 'main.html';//to set time otherwise
+        });
+        setTimeout(function () {
+            window.document.dispatchEvent(new CustomEvent("attention"));
+        }, 30000);
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Welcome Registration Form</h1>
+        
+    </div>
+    <script>
+        var url = new URL(window.location.href);
+        var name = url.searchParams.get("name");
+        var email = url.searchParams.get("email");
+        var title = url.searchParams.get("title");
+        var mobile = url.searchParams.get("mobile");
+        var addresse = url.searchParams.get("addresse");
+      
+        document.write('<h3>My Name: '+name+'</h3>');
+        document.write('<h3>My E-mail: '+email+'</h3>');
+        document.write('<h3>My Tittle: '+title+'</h3>');
+        document.write('<h3>My Mobile: '+mobile+'</h3>');
+        document.write('<h3>My Address: '+addresse+'</h3>');
+
+    </script>
+</body>
+</html>

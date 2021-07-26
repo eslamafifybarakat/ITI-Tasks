@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <style>
+        .center {
+            text-align: center;
+        }
+    
+        .img2{
+                position: absolute;
+                top: 1px;
+                right: 76px;
+            }
+            #navigation{
+                margin-top: 250px;
+            }
+        li{
+            list-style-type: circle;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div id="header">
+
+            <img class="img2" src="dom.jpg" alt="hello..it rains over here:)" />
+        </div>
+        <div id="navigation">
+            <ul id="nav">
+                <li><strong>Memo</strong></li>
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">Photos</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var x = document.createElement("IMG");
+        x.setAttribute("src", "dom.jpg");
+        document.body.appendChild(x);
+    </script>
+</body>
+
+
+
+</html>

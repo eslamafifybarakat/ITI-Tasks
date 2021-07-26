@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascll Code</title>
+    
+</head>
+<body>
+    <p>Press a key on the keyboard in the input field to find out if the ALT key was pressed or not.</p>
+    <br>
+    <input type="text" maxlength="1" onkeyup="displayunicode(event)" />
+    <p id="demo"></p>
+
+<script>
+    var x=document.getElementById("demo");
+    function displayunicode(e){
+    if(e.keyCode){
+        switch(e.keyCode){
+            case 16:
+            x.innerHTML="The SHIFT key was pressed!";
+            break;
+            case 17:
+            x.innerHTML="The CTRL key was pressed!";
+            break;
+            case 18:
+            x.innerHTML="The ALT key was pressed!";
+            break;
+            default:
+            x.innerHTML=e.keyCode;
+            break;
+        }  
+    }
+    }
+</script>
+</body>
+</html>

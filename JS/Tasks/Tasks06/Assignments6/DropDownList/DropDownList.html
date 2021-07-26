@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDownList</title>
+</head>
+
+<body>
+    <label for="band">Bands</label>
+    <select id="band">
+        <option>-----Select Band----- </option>
+    </select>
+    <label for="artist">Artist</label>
+    <select id="artist" onchange="openpage(this.value)">
+        <option>-----Select Artist----- </option>
+    </select>
+    <script src="data.js"></script>
+</body>
+
+</html>
